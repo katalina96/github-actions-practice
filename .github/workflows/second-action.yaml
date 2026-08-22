@@ -1,0 +1,12 @@
+name: Second Workflow
+on: workflow_dispatch 
+jobs: 
+  one:
+  runs-on: ubuntu-latest
+  steps:
+    - name: get os information
+      run: |
+          cat /etc/os-release 
+          date 
+    - name: update 
+      run: sudo apt update -y 
