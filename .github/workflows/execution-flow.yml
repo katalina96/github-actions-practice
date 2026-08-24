@@ -37,7 +37,7 @@ jobs:
       - name: Upload test report
         #this step will only be executed if above steps fails
         if:   
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: test-report
           path: test.json
@@ -59,7 +59,7 @@ jobs:
         id: build-website
         run: npm run build
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: dist-files
           path: dist
