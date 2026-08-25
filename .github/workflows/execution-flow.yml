@@ -33,10 +33,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Test code
+        id: test-code
         run: npm run test
       - name: Upload test report
-        #this step will only be executed if above steps fails
-        if:   
+        #this step only only if above step is failed and not skipped
+        if: failure() && steps.test-code.outcome == 'failure'
         uses: actions/upload-artifact@v7
         with:
           name: test-report
