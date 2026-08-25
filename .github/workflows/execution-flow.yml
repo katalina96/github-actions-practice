@@ -35,6 +35,7 @@ jobs:
         if: steps.cache.outcome.cache-hit != 'true'
         run: npm ci
       - name: Test code
+        #this step will be considered as success even if it fails
         continue-on-error: true
         id: test-code
         run: npm run test
