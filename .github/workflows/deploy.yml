@@ -69,7 +69,7 @@ jobs:
       - name: Get AWS permissions
         uses: aws-actions/configure-aws-credentials@v6
         with:
-          role-to-assume: arn:aws:iam::585008069642:role/Github-oidc
+          role-to-assume: arn:aws:iam::585008069642:role/oidc-github
           aws-region: us-east-1
       - name: Deploy site
         id: deploy
