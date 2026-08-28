@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - AWS-GitHub-Actions-OpenID-Connect
+  workflow_dispatch:
 jobs:
   lint:
     runs-on: ubuntu-latest
