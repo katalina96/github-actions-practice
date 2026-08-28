@@ -2,7 +2,7 @@ name: Deployment
 on:
   push:
     branches:
-      - main
+      - AWS-GitHub-Actions-OpenID-Connect
 jobs:
   lint:
     runs-on: ubuntu-latest
